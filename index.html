@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-4">
+    <header class="mb-4">
+      <div class="form-control w-full max-w-xs mx-auto">
+        <label class="label">
+          <span class="label-text">Search Your Product</span>
+          <span class="label-text"
+            >Press <kbd class="kbd kbd-sm">enter</kbd></span
+          >
+        </label>
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search here"
+          class="input input-bordered w-full max-w-xs"
+        />
+      </div>
+    </header>
+    <section id="not-found"></section>
+    <main>
+      <div class="flex">
+        <div class="flex-none">
+          <ul
+            id="all-menu"
+            class="menu bg-accent text-secondary-content p-2 rounded-box"
+          >
+            <!-- <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li> -->
+          </ul>
+        </div>
+        <div
+          id="products-container"
+          class="grow grid grid-cols-4 gap-4 pl-4"
+        ></div>
+      </div>
+    </main>
+    <section>
+      <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box relative">
+          <label
+            for="my-modal-3"
+            class="btn btn-sm btn-circle absolute right-2 top-2"
+            >✕</label
+          >
+          <div id="modal-body"></div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
